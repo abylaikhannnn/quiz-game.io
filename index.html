@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Умная Викторина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Стартовый экран -->
+        <div id="start-screen" class="screen active">
+            <h1>Умная Викторина</h1>
+            <p>Проверьте свои знания в этой увлекательной викторине!</p>
+            <p>Вам будет предложено 10 вопросов с вариантами ответов.</p>
+            <button id="start-btn" class="btn">Начать викторину</button>
+        </div>
+
+        <!-- Экран игры -->
+        <div id="game-screen" class="screen">
+            <div class="question-counter">Вопрос <span id="current-question">1</span> из 10</div>
+            <div class="progress-bar">
+                <div class="progress" id="progress-bar"></div>
+            </div>
+            <h2 id="question">Вопрос загружается...</h2>
+            <div id="options-container"></div>
+            <button id="next-btn" class="btn" style="display: none;">Следующий вопрос</button>
+        </div>
+
+        <!-- Экран результатов -->
+        <div id="result-screen" class="screen">
+            <h1>Результаты</h1>
+            <div class="score-display">Ваш счет: <span id="score">0</span>/10</div>
+            <div class="result-message" id="result-message"></div>
+            <button id="restart-btn" class="btn">Играть снова</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
